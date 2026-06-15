@@ -1,0 +1,15 @@
+{
+  "name": "byc-jarvis",
+  "version": "1.0.0",
+  "description": "Jarvis AI for BYC Conference - Reshaping Municipal Governance in the Age of AI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JARVIS — BYC Conference</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600;700&family=Noto+Sans+Devanagari:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="grid-bg"></div>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-row">
+        <span class="byc-tag">BYC</span>
+        <h1 class="title">JARVIS</h1>
+        <span class="status-dot" id="statusDot"></span>
+      </div>
+      <p class="conference-title">Reshaping Municipal Governance in the Age of AI</p>
+      <p class="conference-nepali">एआई युगमा नगर शासनको पुनर्संरचना</p>
+    </header>
+
+    <!-- Orb / Visualizer -->
+    <div class="orb-wrapper">
+      <div class="orb-ring ring-outer"></div>
+      <div class="orb-ring ring-mid"></div>
+      <div class="orb-ring ring-inner"></div>
+      <div class="orb" id="orb">
+        <div class="orb-core"></div>
+      </div>
+      <div class="wave-bars" id="waveBars">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <p class="orb-status" id="orbStatus">Tap to speak &nbsp;/&nbsp; बोल्न थिच्नुहोस्</p>
+    </div>
+
+    <!-- Chat transcript -->
+    <div class="chat" id="chat"></div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="mic-btn" id="micBtn" title="Hold to speak">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+          <line x1="12" y1="19" x2="12" y2="23"/>
+          <line x1="8" y1="23" x2="16" y2="23"/>
+        </svg>
+      </button>
+      <div class="text-row">
+        <input type="text" id="textInput" placeholder="Type a question... / प्रश्न टाइप गर्नुहोस्..." autocomplete="off" />
+        <button class="send-btn" id="sendBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </div>
+      <button class="clear-btn" id="clearBtn" title="Clear conversation">↺</button>
+    </div>
+
+    <!-- Lang hint -->
+    <p class="lang-hint">🌐 Auto-detects Nepali &amp; English &nbsp;|&nbsp; स्वचालित भाषा पहिचान</p>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
